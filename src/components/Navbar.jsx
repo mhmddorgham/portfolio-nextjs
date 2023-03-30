@@ -6,6 +6,22 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navbar = () => {
+  // Function will execute on click of button
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("mhmd_CV.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "mhmd_CV.pdf";
+        alink.click();
+      });
+    });
+  };
+
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
@@ -86,12 +102,14 @@ const Navbar = () => {
         >
           <div>
             <div className="flex justify-between w-full items-center">
-              <Image
-                src="/../public/assets/navLogo.png"
-                alt="/"
-                width="87"
-                height="35"
-              />
+              <Link href="/">
+                <p
+                  onClick={() => setNav(false)}
+                  className="text-3xl font-bold text-[#5651e5] font-sans rounded-full shadow-xl shadow-gray-300 py-5 px-3 cursor-pointer"
+                >
+                  MD
+                </p>
+              </Link>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -139,18 +157,46 @@ const Navbar = () => {
                   Let us Connect
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaGithub />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <AiOutlineMail />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <a
+                    href="https://www.linkedin.com/in/mohammed-dorgham-822924241/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div
+                      onClick={() => setNav(false)}
+                      className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                    >
+                      <FaLinkedinIn />
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/mhmddorgham"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div
+                      onClick={() => setNav(false)}
+                      className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                    >
+                      <FaGithub />
+                    </div>
+                  </a>
+                  <Link href="/#contact">
+                    <div
+                      onClick={() => setNav(false)}
+                      className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                    >
+                      <AiOutlineMail />
+                    </div>
+                  </Link>
+                  <button
+                    onClick={onButtonClick}
+                    type="button"
+                    className="rounded-full text-black shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                  >
                     <BsFillPersonLinesFill />
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
