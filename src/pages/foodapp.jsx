@@ -32,8 +32,8 @@ const foodapp = () => {
             mouth-watering dishes and recipes, search for specific dishes, and
             even filter by dietary requirements. With a sleek and responsive
             design, users can seamlessly navigate the app and easily find what
-            they're looking for. <br /> Behind the scenes, the app is powered by
-            various APIs that provide the necessary data to populate the
+            they are looking for. <br /> Behind the scenes, the app is powered
+            by various APIs that provide the necessary data to populate the
             content. The integration of these APIs showcases my ability to work
             with external data sources and incorporate them into an application.
           </p>
