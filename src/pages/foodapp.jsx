@@ -38,14 +38,14 @@ const foodapp = () => {
             with external data sources and incorporate them into an application.
           </p>
           <a
-            href="https://github.com/mhmddorgham/food_app"
+            href="https://github.com/mhmddorgham"
             target="_blank"
             rel="noreferrer"
           >
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
           <a
-            href="https://github.com/mhmddorgham/food_app"
+            href="https://foodappreacttailwind.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >

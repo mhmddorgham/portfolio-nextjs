@@ -45,7 +45,7 @@ const hoobank = () => {
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
           <a
-            href="https://github.com/mhmddorgham/hoobank_app"
+            href="https://modrenbankwebsite.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
