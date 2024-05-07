@@ -8,14 +8,14 @@ const Main = () => {
   // Function will execute on click of button
   const onButtonClick = () => {
     // using Java Script method to get PDF file
-    fetch("MhmdDorgham.pdf").then((response) => {
+    fetch("MidoDorgham.pdf").then((response) => {
       response.blob().then((blob) => {
         // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
         // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "MhmdDorgham.pdf";
+        alink.download = "MidoDorgham.pdf";
         alink.click();
       });
     });
@@ -25,10 +25,10 @@ const Main = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600">
-            let us build something together
+            let&apos;s build something together
           </p>
           <h1 className="py-4 text-gray-700">
-            Hi, I am <span className="text-[#5651e5]">Mhmd</span>
+            Hi, I am <span className="text-[#5651e5]">Mido</span>
           </h1>
 
           <h1 className="py-2 text-gray-700">A Full-Stack Web Developer</h1>

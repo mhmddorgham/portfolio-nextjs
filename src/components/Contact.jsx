@@ -54,7 +54,7 @@ const Contact = () => {
         // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "MhmdDorgham.pdf";
+        alink.download = "MidoDorgham.pdf";
         alink.click();
       });
     });
@@ -176,9 +176,8 @@ const Contact = () => {
                 <button
                   type="submit"
                   value="Send"
-                  className={`w-full p-4 text-gray-100 mt-4 !bg-[#5651e5] flex justify-center items-center  ${
-                    loading ? "cursor-not-allowed" : ""
-                  } `}
+                  className={`w-full p-4 text-gray-100 mt-4 !bg-[#5651e5] flex justify-center items-center  ${loading ? "cursor-not-allowed" : ""
+                    } `}
                 >
                   {loading ? (
                     <svg
